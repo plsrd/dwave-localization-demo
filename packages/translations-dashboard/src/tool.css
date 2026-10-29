@@ -1,0 +1,65 @@
+/*
+ * Tailwind for the dashboard when it's embedded in the Studio.
+ * Theme and utilities only: Tailwind's preflight reset would restyle the whole Studio.
+ */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@source './';
+
+/*
+ * Minimal slice of the preflight reset the dashboard relies on, scoped to the tool and kept in the
+ * base layer so Sanity UI's own (unlayered) component styles and Tailwind utilities still win.
+ */
+@layer base {
+  :where(.l10n-dashboard) button {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+  }
+
+  :where(.l10n-dashboard) img {
+    max-width: 100%;
+  }
+
+  :where(.l10n-dashboard) table {
+    border-collapse: collapse;
+  }
+}
+
+.l10n-dashboard {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+.l10n-dashboard *,
+.l10n-dashboard *::before,
+.l10n-dashboard *::after {
+  box-sizing: border-box;
+}
+
+.dashboard-content {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+@keyframes chart-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chart-section-loaded {
+  animation: chart-fade-in 0.3s ease-out;
+}
