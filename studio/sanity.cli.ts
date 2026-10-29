@@ -26,6 +26,7 @@ export default defineCliConfig({
     },
   },
   deployment: {
+    appId: 'v4kuo1dn5auj6ufuoae8c9o2',
     autoUpdates: true,
   },
   typegen: {

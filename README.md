@@ -3,6 +3,7 @@
 Demo built from the Agentic Localization starter for D-Wave.
 
 - **Sanity project:** `krm54zrd` (dataset `dwave-localization`)
+- **Live:** Studio at https://dwave-localization.sanity.studio, frontend at https://dwave-localization-frontend.vercel.app. Invite people under the project's members in [sanity.io/manage](https://www.sanity.io/manage)
 - **Locales:** English (`en-US`, source) and Japanese (`ja-JP`)
 - **Glossary:** D-Wave product terminology. Do-not-translate: D-Wave, Leap, Advantage2, Advantage, Ocean, Zephyr, Pegasus. Approved JA terms: 量子アニーリング, 量子ビット, ハイブリッドソルバー, 最適化. Forbidden: "quantum supremacy", "magic"
 - **Style guide:** Japanese, formal (です/ます), product names kept in Latin script

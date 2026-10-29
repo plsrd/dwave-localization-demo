@@ -49,3 +49,5 @@ production.tar.gz
 # Internal
 notes/
 TODO.md
+.vercel
+.env*
